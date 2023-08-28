@@ -1,0 +1,1 @@
+console.log("API_URL = https://jdjadjsdasd.com/dewidjewdew?api_key" + API_KEY);
