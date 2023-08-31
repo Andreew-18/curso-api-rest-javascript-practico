@@ -133,6 +133,7 @@ button {
   position: fixed;
   top: 0;
   width: 100%;
+
 }
 
 .header-container--categoryView {
@@ -190,26 +191,40 @@ button {
 }
 
 .trendingPreview-movieList {
+  width: 100%;
+  display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  height: 241px;
-  padding-left: 9px;
-  padding-bottom: 16px;
+  margin: 0px 0px 20px 0px;
+ 
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  };
+
+  @media (min-width: 1048px ) {
+    justify-content: flex-start;
+  };
+
 }
 
 .trendingPreview-movieList .movie-container {
-  display: inline-block;
-  margin-right: 8px;
+ display: flex;
+  margin-left: 8px;
+  margin-bottom: 10px;
 }
 
 .trendingPreview-movieList .movie-container .movie-img {
-  height: 225px;
-  min-height: 225px;
+  height: 250px;
+  width: auto;
+  
+  /* min-height: 225px;
   max-height: 225px;
   width: 150px;
   min-width: 150px;
-  max-width: 150px;
+  max-width: 150px; */
 }
 
 
@@ -260,19 +275,29 @@ button {
 /* Generic List (search, trending & category) */
 .genericList-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center;*/ 
+ justify-content: space-evenly; 
   flex-wrap: wrap;
-  padding: 32px 24px;
+  padding: 32px 0px;
+
+  @media (min-width: 765px ) {
+    justify-content: flex-start;
+    padding-left: 40px;
+  };
+
+  @media (max-width: 1039px ) {
+    padding-left: 40px;
+  };
+
 }
 
 .genericList-container .movie-container {
-  display: inline-block;
-  width: 47.5%;
+  padding-right: 10px;
 }
 
 .genericList-container .movie-img {
-  width: 100%;
+  height: 186px;
+  width: 118px;
 }
 
 
